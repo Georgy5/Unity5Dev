@@ -232,7 +232,11 @@ public class TextController : MonoBehaviour {
 					"sound of a latch clicking.\n" +
 					"You slowly open the door, almost not believing your escape could be upon you.\n" + 
 					"Then you leave the room which has been your cell and towards an exit....\n\n" +
-					"<color=green>Freedom!?!</color>";
+					"<color=green>Freedom!?!</color>" +
+					"\n\n\nPress <color=yellow>P</color> to Play again";
+		if (Input.GetKeyDown(KeyCode.P)){
+			myState = States.cell;
+		}
 	}
 
 }
