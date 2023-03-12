@@ -76,12 +76,12 @@ public class TextController : MonoBehaviour {
 		//alternatively
 		//if (Input.GetKeyDown (KeyCode.Space)){
 		text.text =	"You are in some sort of <color=red>prison</color> cell. You've been here for weeks, " +
-					"may be months.\n" + 
+					"maybe months.\n" + 
 					"You want to <color=green>escape</color>.\n" +
 					"There are some dirty sheets on the bed, there's a mirror on the wall, and the door " +
 					"is locked from the outside.\n\n " +
-					"Press <color=orange>S</color> to view Sheets, <color=orange>M</color> to view Mirror " + 
-					"or <color=orange>L</color> to view Lock";
+					"Press <color=orange>S</color> to view the Sheets, <color=orange>M</color> to view the Mirror " + 
+					"or <color=orange>L</color> to view the Lock";
 		if (Input.GetKeyDown(KeyCode.S)){
 			myState = States.sheets_0;
 		}
@@ -121,8 +121,8 @@ public class TextController : MonoBehaviour {
 	// Sheets state without wire
 	void state_sheets_0(){
 		text.text =	"The sheets look as though they've never been washed. You wonder how many other people " +
-					"have been held prisoner here. You have no use for these dirty sheets. You're definately " + 
-					"not climbing out any windows at this stage.\n" + 
+					"have been held prisoner here. You have no use for these dirty sheets. You're definitely " + 
+					"not climbing out of any windows at this stage.\n" + 
 					"You want to <color=green>escape</color>.\n\n" +
 					"Press <color=orange>R</color> to Return";
 		if (Input.GetKeyDown(KeyCode.R)){
@@ -133,7 +133,7 @@ public class TextController : MonoBehaviour {
 	void state_lock_0(){
 		text.text = "You look at the door lock. "+
 					"Looking at the lock you remembered trying to pick a lock in highschool, you remember " +
-					"the theory. You definately have the time to try...\n" +
+					"the theory. You definitely have the time to try...\n" +
 					"...but certainly not without any tools.\n\n " +
 					"Press <color=orange>R</color> to Return";
 		if (Input.GetKeyDown(KeyCode.R)){
@@ -145,7 +145,7 @@ public class TextController : MonoBehaviour {
 		text.text = "Looking at the mirror reminds you of how long you've been imprisoned. Your face is dirty" +
 					" and your hair has grown. Has many weeks has it been again??\n" +
 					"You want to <color=green>escape</color>.\n\n" +
-					"Focusing back onto your goal you stop looking into the mirror and start looking at it." + 
+					"Focusing back onto your goal, you stop looking into the mirror and start looking at it." + 
 					"Suddenly you notice that the mirror is mounted with screws, and that one screw has a " +
 					"wire wrapped around it.\n\n" +
 					"Press <color=orange>R</color> to Return or " +
@@ -158,11 +158,11 @@ public class TextController : MonoBehaviour {
 	}
 	// Taking the wire
 	void state_take_wire(){
-		text.text = "You unwrap the wire. next you try to loosen the screw, but it's too tight. May be even " +
+		text.text = "You unwrap the wire. Next you try to loosen the screw, but it's too tight. Maybe even " +
 					"rusted in.\n\n" +
 					"Press <color=orange>R</color> to Return, <color=orange>S</color> to view Sheets " + 
 					"or <color=orange>L</color> to view Lock";
-		// set flag to show that the user has thw wire item
+		// set flag to show that the user has the wire item
 		wire = true;
 		if (Input.GetKeyDown(KeyCode.R)){
 			myState = States.cell_1;
@@ -175,7 +175,7 @@ public class TextController : MonoBehaviour {
 	// Mirror state with wire
 	void state_cell_mirror(){
 		text.text = "Looking at the mirror reminds you of how long you've been imprisoned. Your face is dirty" +
-					" and your hair has grown. Has many weeks has it been again??\n" +
+					" and your hair has grown. How many weeks has it been again??\n" +
 					"You want to <color=green>escape</color>.\n\n" +
 					"Press <color=orange>R</color> to Return";
 		if (Input.GetKeyDown(KeyCode.R)){
@@ -184,7 +184,7 @@ public class TextController : MonoBehaviour {
 	}
 	// Sheets state with wire
 	void state_sheets_1(){
-		text.text = "Looking at the sheets you think that you cannot spend one more night in this cruel cell.\n" +
+		text.text = "Looking at the sheets, you think that you cannot spend one more night in this cruel cell.\n" +
 					"You want to <color=green>escape</color>.\n\n" +
 					"Press <color=orange>R</color> to Return to viewing your cell";
 		if (Input.GetKeyDown(KeyCode.R)){
@@ -216,7 +216,7 @@ public class TextController : MonoBehaviour {
 	// Lock state with wire
 	void state_lock_1(){
 		text.text = "You look at the door lock. "+
-					"Looking at the lock you remembered trying to pick a lock in highschool, you remember " +
+					"Looking at the lock, you remembered trying to pick a lock in highschool. You remember " +
 					"the theory.\n" +
 					"...you bend the wire into shape.\n\n " +
 					"Press <color=orange>R</color> to Return or <color=orange>P</color> to Pick the lock";
